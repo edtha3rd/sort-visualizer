@@ -43,14 +43,7 @@ class App extends Component {
 
   render() {
     let bars = this.state.array.map((value, index) => {
-      return (
-        <Bar
-          key={index}
-          index={index}
-          length={value}
-          color={this.state.colorCodes[index]}
-        />
-      )
+      return <Bar key={index} index={index} length={value} color={1} />
     })
     return <div className="app">{bars}</div>
   }
