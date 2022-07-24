@@ -7,9 +7,6 @@ function Bar({ index, length, color, changeArray }) {
   useEffect(() => {
     setLen(length)
   }, [length])
-  //   const barStyle = {
-  //     height: length,
-  //   }
 
   const colors = [
     ['rgba(61,90,241,0.5)', 'rgba(61,90,241,0.2)'],
@@ -26,10 +23,10 @@ function Bar({ index, length, color, changeArray }) {
   }
 
   const front_back_left_right = {
-    height: `${length}px`,
-    transform: `translateY(${200 - length}px)`,
     backgroundColor: `${colors[color][0]}`,
     boxShadow: `5px 5px 50px 5px ${colors[color][1]}`,
+    height: `${length}px`,
+    transform: `translateY(${200 - length}px)`,
     transition: '0.3s',
   }
 

@@ -45,6 +45,15 @@
   justify-content: center;
 }
 
+.footer {
+  bottom: 0;
+  border-top: 2px solid black;
+  height: 48px;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+}
+
 .frame {
   align-items: center;
   display: flex;

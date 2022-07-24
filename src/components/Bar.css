@@ -37,7 +37,7 @@
 }
 
 .quantity-button {
-  background: rgba(10, 255, 1, 0.2);
+  background: teal;
   cursor: pointer;
   margin: 1px;
   text-align: center;
