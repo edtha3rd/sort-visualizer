@@ -191,6 +191,9 @@ class App extends Component {
         <div className="frame">
           <div className="barsDiv container card">{bars}</div>
         </div>
+        <div>
+          <h2>Current algorithm is: {this.state.algorithm}</h2>
+        </div>
         <div className="control-panel">
           <div className="control-buttons">
             <button className="controller" onClick={this.previousStep}>
@@ -204,7 +207,9 @@ class App extends Component {
         </div>
         <div className="panel"></div>
         <div className="footer">
-          <p>3D Sorting Algorithm Visualizer - Tawanda Munongo, 2022</p>
+          <p className="footerText">
+            3D Sorting Algorithm Visualizer - Tawanda Munongo, 2022
+          </p>
         </div>
       </div>
     )

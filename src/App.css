@@ -46,12 +46,20 @@
 }
 
 .footer {
+  background-color: slategray;
   bottom: 0;
   border-top: 2px solid black;
-  height: 48px;
+  color: white;
+  height: 64px;
   position: absolute;
   width: 100vw;
   text-align: center;
+}
+
+.footerText {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: x-large;
 }
 
 .frame {
