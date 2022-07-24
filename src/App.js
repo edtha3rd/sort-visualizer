@@ -35,6 +35,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    document.title = '3D Sort and See'
     this.genRandomArray()
   }
 
