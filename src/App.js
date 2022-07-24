@@ -1,5 +1,13 @@
 import React, { Component } from 'react'
 
+//icons
+import {
+  MdFastForward,
+  MdFastRewind,
+  MdPlayCircleOutline,
+  MdRotateLeft,
+} from 'react-icons/md'
+
 //local imports
 import Bar from './components/Bar'
 
@@ -41,11 +49,63 @@ class App extends Component {
     })
   }
 
+  changeArray = (index, value) => {
+    let arr = this.state.array
+    arr[index] = value
+    this.setState({
+      array: arr,
+      arraySteps: [arr],
+      currentStep: 0,
+    })
+  }
+
   render() {
     let bars = this.state.array.map((value, index) => {
-      return <Bar key={index} index={index} length={value} color={1} />
+      return (
+        <Bar
+          key={index}
+          index={index}
+          length={value}
+          color={0}
+          changeArray={this.changeArray}
+        />
+      )
     })
-    return <div className="app">{bars}</div>
+
+    let playButton
+    if (this.state.arraySteps.length === this.state.currentStep) {
+      playButton = (
+        <button className="controller">
+          <MdRotateLeft />
+        </button>
+      )
+    } else {
+      playButton = (
+        <button className="controller">
+          <MdPlayCircleOutline />
+        </button>
+      )
+    }
+
+    return (
+      <div className="App">
+        <div className="frame">
+          <div className="barsDiv container card">{bars}</div>
+        </div>
+        <div className="control-panel">
+          <div className="control-buttons">
+            <button className="controller">
+              <MdFastRewind />
+            </button>
+            {playButton}
+            <button className="controller">
+              <MdFastForward />
+            </button>
+          </div>
+        </div>
+        <div className="panel"></div>
+      </div>
+    )
   }
 }
 

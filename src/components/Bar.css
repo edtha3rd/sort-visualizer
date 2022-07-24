@@ -1,5 +1,4 @@
 .back {
-  background: rgba(red, green, blue, alpha);
   transform: translateZ(-4px);
 }
 
@@ -37,6 +36,23 @@
   transform: rotateY(90deg);
 }
 
+.quantity-button {
+  background: rgba(10, 255, 1, 0.2);
+  cursor: pointer;
+  margin: 1px;
+  text-align: center;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.quantity-button:hover {
+  opacity: 0.5;
+}
+
 .right {
   transform-origin: right;
   transform: rotateY(-90deg);
@@ -54,4 +70,14 @@
   height: 34px;
   transform-origin: top;
   transform: rotateX(-90deg);
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
