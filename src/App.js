@@ -206,6 +206,11 @@ class App extends Component {
             </button>
           </div>
         </div>
+        <div>
+          <a href="https://en.wikipedia.org/wiki/Bubble_sort" target="_blank">
+            <p>Learn more</p>
+          </a>
+        </div>
         <div className="panel"></div>
         <div className="footer">
           <p className="footerText">
